@@ -1,0 +1,237 @@
+@import "css/layout.css";
+@import "css/nav.css";
+@import "css/footer.css";
+
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(30px, auto);
+  grid-gap: 6px;
+  grid-template-areas:
+  "nav nav"
+  "recent-post recent-post"
+  "newsletter newsletter"
+  "one two"
+  "three four"
+  "three four"
+  "five six"
+  "ft ft";
+}
+
+@media (min-width: 600px) {
+  #container {
+    height: 300vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px auto auto auto auto auto 150px 40px;
+    grid-gap: 10px;
+    grid-template-areas:
+    "nav nav nav nav"
+    "recent-post recent-post one one"
+    "recent-post recent-post two two"
+    "recent-post recent-post three three"
+    "five five four four"
+    "five five six six"
+    "newsletter newsletter newsletter newsletter"
+    "ft ft ft ft";
+  }
+}
+
+
+#recent-post {
+  grid-area: recent-post;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/colourful-india.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: #fffaf0;
+}
+
+.posts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fffaf0;
+  min-height: 160px;
+}
+
+#one {
+  grid-area: one;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/monumental-india.jpg");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#two {
+  grid-area: two;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/talent-everywhere.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#three {
+  grid-area: three;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/folklore.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#four {
+  grid-area: four;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/nightlife.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#five {
+    grid-area: five;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/art.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+#six {
+    grid-area: six;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/flora.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+
+.text {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-width: 60%;
+  max-width: 500px;
+  padding: 10px 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.links {
+  outline: none;
+  text-decoration: none;
+  color: #fffaf0;
+}
+
+.links:visited {
+  color: #fffaf0;
+}
+
+.links:hover {
+  color: aquamarine;
+}
+
+.info {
+  text-align: center;
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .posts h4 {
+    font-size: 1.5em;
+  }
+
+  .posts .info {
+    font-size: 0.8em;
+  }
+
+  .text {
+    padding: 5px 15px;
+    margin: 5px;
+  }
+}
+
+/* newsletter */
+
+#newsletter {
+  grid-area: newsletter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-container {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 5px;
+}
+
+.newsletter-element {
+  width: 30%;
+}
+
+input[type=text], input[type=submit], input[type=tel], input[type=email] {
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 8px 5px 8px;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e54b4b;
+  border: 2px solid #e54b4b;
+  color: #fffaf0;
+  transition: all 0.3s;
+  border: none;
+}
+
+input[type=submit]:hover {
+  background-color: #f3a8a8;
+  border: 2px solid #e54b4b;
+  color: white;
+  transform: scale(1.2);
+}
+
+@media (min-width: 600px) and (max-width: 780px) {
+  .newsletter-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .newsletter-element {
+    width: 40%;
+  }
+
+  input[type=submit] {
+    font-size: 0.9em;
+  }
+}

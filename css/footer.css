@@ -1,0 +1,43 @@
+footer {
+    grid-area: ft;
+    height: 30px;
+    color: #222;
+    padding-bottom: 10px;
+    text-align: center;
+}
+  
+.fa {
+    padding: 10px;
+}
+  
+.fa-facebook-official{
+    color:skyblue;
+}
+
+.fa-instagram{
+    color:rgba(241, 209, 28, 0.829);
+}
+
+.fa-youtube-play{
+    color:rgb(190, 79, 79);
+}
+
+.fa-github{
+    color:rgb(38, 180, 69);
+}
+
+.fa-facebook-official:hover{
+    color:darkblue;
+}
+
+.fa-instagram:hover{
+    color:rgb(235, 116, 19);
+}
+
+.fa-youtube-play:hover{
+    color:rgb(226, 24, 24);
+}
+
+.fa-github:hover{
+    color:rgb(3, 41, 11);
+}

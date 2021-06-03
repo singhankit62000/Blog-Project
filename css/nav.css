@@ -1,0 +1,116 @@
+/* navigation */
+
+nav{
+  grid-area: nav;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  background: white;
+  justify-content: center;
+}
+
+#nav-title{
+  display: flex;
+  font-family: 'Special Elite','Poiret One', serif;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  color: #F6AA1C;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#titlebar {
+  font-size: 1.2em;
+  text-align: center;
+  margin-left: 0;
+  font-weight: 700;
+}
+
+#nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  font-size: 1em;
+  margin: 0px;
+  transition: all 0.3s;
+}
+
+li {
+  padding: 0 5px;
+}
+
+.nav-itm {
+  list-style-type: none;
+  margin: 5px;
+  padding: 8px 8px;
+}
+
+.nav-itm > a {
+  padding: 8px 20px;
+  border-radius: 2px;
+}
+
+.non-current {
+  color: #F6AA1C;
+}
+
+.current .nav-link{
+  color: white;
+  background-color: #F6AA1C;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: #F6AA1C;
+}
+
+@media (min-width: 600px) {
+  nav {
+    height: 60px;
+  }
+
+  #nav-title {
+    display: flex;
+    flex-flow: row wrap;
+    width: 40%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #titlebar {
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 0;
+    font-weight: 600;
+  }
+
+  #nav-list {
+    display: flex;
+    flex-flow: row wrap;
+    width: 60%;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    font-size: 1em;
+    margin: 0px;
+    transition: all 0.3s;
+  }
+}
